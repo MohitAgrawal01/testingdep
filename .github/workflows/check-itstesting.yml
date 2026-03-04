@@ -1,8 +1,14 @@
+on:
+
 name: Check itstesting.txt exists
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
   check-itstesting:
